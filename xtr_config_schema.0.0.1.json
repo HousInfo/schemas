@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "xtr_core_0_0_1",
+    "title": "XTR Config Schema",
+    "description": "XTR Config Schema",
+    "type": "object",
+    "properties": {
+        "core": {
+            "description": "XTR Core configuration",
+            "type": "object",
+            "properties": {
+                "runner_class": {
+                    "description": "Runner modules and class name",
+                    "type": "string"
+                }
+            }
+        },
+        "plugins": {
+            "description": "XTR Plugins configuration",
+            "type": "object",
+            "properties": {
+                "paths": {
+                    "description": "Path to plugins directory",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+
+            },
+            "required": ["paths"]
+        }
+    },
+    "required": ["core"]
+}
